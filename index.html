@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>GirlDevelopIt</title>
+        <title>Intro to CLI</title>
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -19,17 +19,6 @@
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css" id="highlight-theme">
 
-        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
-        <script>
-          if( window.location.search.match( /print-pdf/gi ) ) {
-            var link = document.createElement( 'link' );
-                link.rel = 'stylesheet';
-                link.type = 'text/css';
-                link.href = 'bower_components/reveal.js/css/print/pdf.css';
-                document.getElementsByTagName( 'head' )[0].appendChild( link );
-            }
-        </script>
-
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
@@ -41,503 +30,842 @@
 
             <div class="slides">
 
-                
-                    
-                        
-    <section data-html="slides/intro.html"></section>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/welcome.html"></section>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-markdown="slides/about-your-instructor.md"></section>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/what-is-a-shell.html"></section>
+    <section>
+      <h1>Unix Command Line Basics</h1>
+    </section>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/the-shell.html"></section>
+    <section>
+      <h2>What is a Shell?</h2>
+      <h4>A text-based command interpreter</h4><br/>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/the-prompt.html"></section>
+      <p>The most common shell (and default on OS X) is BASH</p><br/>
+      <p>For OS X, use a shell via the “Terminal” app</p><br/>
+      <p>For Windows, we could use PowerShell, but today, we'll use ConEmu</p>
+    </section>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/prompt.html"></section>
+    <section>
+      <h2>The Shell</h2>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/command-structure.html"></section>
+      <img src="img/terminal.png" alt="The Terminal"/>
+    </section>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/the-current-directory.html"></section>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/pwd.html"></section>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/directories.html"></section>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/file-paths.html"></section>
 
-
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/unix-file-structure.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/file-system-structure.html"></section>
+    <section data-html="slides/the-prompt.html">
+      <h2>The Prompt</h2>
 
+      <p>Usually shows your username and computer name (hostname).</p><br/>
+      <p>It indicates that the shell is ready for you to enter a command.</p>
+    </section>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/shortcuts.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/change-directory.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/cd.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/clear-your-terminal.html"></section>
+    <section data-html="slides/prompt.html">
+      <h2>Prompt</h2>
 
+      <img src="img/prompt.jpg" alt="The Prompt"/>
+    </section>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/list-directory.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/ls.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/flags.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/ls-a.html"></section>
+    <section data-html="slides/command-structure.html">
+      <h2>Command Structure</h2>
 
+      <pre><code class="html" contenteditable>$ command -options targets</code></pre>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/ls-l.html"></section>
+      <br/><p><em>Don’t forget to hit enter at the end of each command.</em></p>
+    </section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/ls-al.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/file-names.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/making-and-removing-directories.html"></section>
 
+    <section data-html="slides/the-current-directory.html">
+      <h2>The Current Directory</h2>
+      <h3><code>pwd</code></h3>
+      <h4>(Print Working Directory)</h4>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/mkdir-rmdir.html"></section>
+      <br><p>Type it whenever you want to see what directory (folder) you’re in.</p>
+    </section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/exercise-1.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/creating-a-file.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/touch.html"></section>
 
+    <section data-html="slides/pwd.html">
+      <h2>pwd</h2>
+      <h4>(print working directory)</h4>
+      <img src="img/pwd.png" alt="pwd"/>
+    </section>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/copying-a-file.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/cp.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/copying-a-directory.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/cp-r.html"></section>
+    <section data-html="slides/directories.html">
+      <h2>Directories</h2>
+      <h4>Containers for files or other directories.</h4><br/>
+      <p>Also referred to as "folders".</p><br/>
+      <p>Nested files and directories can be referenced using <em>paths</em>.</p>
+    </section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/moving-or-renaming-a-filedirectory.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/move-a-filedirectory.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/rename-a-filedirectory.html"></section>
 
+    <section data-html="slides/file-paths.html">
+      <h2>File Paths</h2>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/remove-a-file.html"></section>
+      <h4>A sequence of nested directories, with a file or directory at the end.</h4><br/>
+      <p>Each directory or file is separated by a forward slash "/".</p><br/>
 
+      </p>Two Types of Paths:</p>
+      <p><strong>Relative</strong>: <code class="html" contenteditable>Desktop/Photos/grumpycat.jpg</code></p>
+      <p><strong>Absolute</strong>: <code class="html" contenteditable>/Users/paigecrum/Desktop/Photos/grumpycat.jpg</code></p>
+    </section>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/rm.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/exercise-2.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/view-a-file.html"></section>
 
+    <section data-html="slides/shortcuts.html">
+      <h2>Shortcuts</h2>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/cat.html"></section>
+      <ul>
+        <li>Current Directory: (<b>.</b>)</li>
+        <li>Parent Directory: (<b>..</b>)</li>
+        <li>Home Directory: (<b>~</b>)</li>
+        <li>Root Directory: (<b>/</b>)</li>
+      </ul>
+    </section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/more.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/less.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/edit-a-file.html"></section>
 
+    <section>
+      <h2>Change Directory</h2>
+      <h3><code>cd</code></h3>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/search-in-a-file.html"></section>
+      <p>Use the <b><code>cd</code></b> command to change directories.</p><br/>
+      <p><em>Expects a file path as an argument.</em></p><br/>
+      <p>If no file path is given, it assumes your home directory (~) by default.</p>
+    </section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/grep.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/wildcard-matching.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/finding-files.html"></section>
 
+    <section>
+      <h2>cd</h2>
+      <h4>(change directory)</h4>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/find.html"></section>
+      <img src="img/cd.png" alt="cd">
+      <p><em>There are 2 other ways that we could have gotten to our home directory...what are they?</em></p>
+    </section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/redirecting-output.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/redirecting-output-example.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/redirection.html"></section>
 
+    <section>
+      <h2>Clear your Terminal</h2>
+      <h3><code>clear</code></h3>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/redirection-example.html"></section>
+      <p>The <b><code>clear</code></b> command clears the contents of the terminal and issues a prompt.</p><br>
+      <p>Feel free to use this whenever things get too cluttered.</p>
+    </section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/exercise-3.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/command-line-movement.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/more-command-line-movement.html"></section>
 
+    <section data-html="slides/list-directory.html">
+      <h2>List Directory</h2>
+      <h3><code>ls</code></h3>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/command-line-history.html"></section>
+      <p>Use the <strong><code>ls</code></strong> command to list the contents of a directory.</p><br>
+      <p><em>Expects a file path as an argument.</em></p><br>
+      <p>If no file path is given, it assumes the current directory by default.</p>
+    </section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/history.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/exercise-4.html"></section>
 
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/resources.html"></section>
 
+    <section data-html="slides/ls.html">
+      <h2>ls</h2>
+      <h4>(list directory)</h4>
 
-                    
-                    
-                
-                    
-                        
-    <section data-html="slides/thanks.html"></section>
+      <img src="img/ls.png" alt="ls">
+    </section>
 
 
-                    
-                    
-                
+
+
+
+
+
+    <section data-html="slides/flags.html">
+      <h2>Flags</h2>
+
+      <h4>Some commands have additional options that you can specify by using flags.</h4><br>
+      <p>Flags are preceded by a hyphen, and are often a single character.</p>
+      <pre><code>$ ls -a</code></pre>
+      <pre><code>$ ls -l</code></pre>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/ls-a.html">
+      <h2>ls -a</h2>
+      <h4><code>-a</code> = show hidden files</h4>
+
+      <img src="img/ls-a.png" alt="ls -a" width="78%" height="78%">
+      <p><em>Notice that hidden file names begin with a "."</em></p>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/ls-l.html">
+      <h2>ls -l</h2>
+      <h4><code>-l</code> = use a “long list” format (shows more verbose output)</h4>
+
+      <img src="img/ls-l.png" alt="ls -l">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/ls-al.html">
+      <h2>ls -al</h2>
+      <h4>Show hidden files and use a long list format</h4>
+
+      <img src="img/ls-al.png" alt="ls -al" width="72%" height="72%">
+      <p>You can combine flags or list them separately separated by spaces. (e.g. <code>ls -a -l</code>)</p>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/file-names.html">
+      <h2>File Names</h2>
+
+      <ul>
+        <li>case sensitive</li>
+        <li>any character (besides “/”)</li>
+        <li>file extensions are for user convenience</li>
+      </ul><br/><br/>
+
+      <p>Examples:</p>
+      <pre><code class="html" contenteditable>README   .bashrc   index.html    index.html.old    Bugs List.txt</code></pre>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/making-and-removing-directories.html">
+      <h2>Making and Removing Directories</h2>
+
+      <p>Use the <strong>mkdir</strong> command to create a new empty directory.</p><br>
+      <p>Use the <strong>rmdir</strong> command to remove an empty directory.</p><br>
+      <p>Use <strong>rm -r</strong> to remove a non-empty directory<br><em>...be careful!</em></p><br>
+      <p><em>All 3 commands expect the name of a directory as an argument.</em></p>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/mkdir-rmdir.html">
+      <h2>mkdir, rmdir</h2>
+      <h4>(make directory, remove directory)</h4>
+
+      <img src="img/makeremove.png" alt="mkdir, rmdir">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/exercise-1.html">
+      <h3>Exercise 1</h3>
+
+      <ol>
+        <li>Change to your personal server folder</li>
+        <li>Create a <b>jobtrain/practice</b> directory path</li>
+        <li>Navigate into the <b>jobtrain/practice</b> directory</li>
+        <li>Create a <b>CLI</b> directory</li>
+        <li>View the contents of the <b>CLI</b> directory</li>
+        <li>Navigate up two directories</li>
+        <li>Use the <b>pwd</b> command to verify you are home</li>
+        <li>Remove the <b>jobtrain/practice/CLI</b> path</li>
+      </ol>
+
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/creating-a-file.html">
+      <h2>Create a File</h2>
+      <h3><code>touch</code></h3>
+      <p>Use the <b>touch</b> command to create a new file.</p><br>
+      <p><em>The touch command expects the name of your new file as an argument.</em></p>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/touch.html">
+      <h2>touch</h2>
+      <h4>(create a file)</h4>
+
+      <img src="img/touch.png" alt="touch">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/copying-a-file.html">
+      <h2>Copy a File</h2>
+      <h3><code>cp</code></h3>
+
+      <p>Use the <b>cp</b> command to copy a file.</p><br>
+      <p>The <b>cp</b> command takes two arguments:</p>
+      <p>1st argument = the "origin" file</p>
+      <p>2nd argument = the "destination" file</p>
+      <pre><code class="html" contenteditable>$ cp resume.txt resume-copy.txt</code></pre>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/cp.html">
+      <h2>cp</h2>
+      <h4>(copy a file)</h4>
+      <h5><code class="html" contenteditable>$ cp origin destination</code></h5>
+      <img src="img/cp.png" alt="cp">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/copying-a-directory.html">
+      <h2>Copy a Directory</h2>
+      <h3><code>cp -R</code></h3>
+
+      <p>Use the <b>cp -R</b> command to copy a directory.</p><br>
+      <p>The <b>cp -R</b> command takes two arguments:</p>
+      <p>1st argument = the "origin" directory</p>
+      <p>2nd argument = the "destination" directory</p>
+      <pre><code class="html" contenteditable>$ cp -R homework old-homework</code></pre>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/cp-r.html">
+      <h2>cp -R</h2>
+      <h4>(copy a directory)</h4>
+      <h5><code class="html" contenteditable>$ cp -R origin destination</code></h5>
+      <img src="img/cp-R.png" alt="cp-R">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/moving-or-renaming-a-filedirectory.html">
+      <h2>Moving (or renaming) a File/Directory</h2>
+
+      <p>Use the <b>mv</b> command to move a file or directory.</p><br>
+      <p>The <b>mv</b> command takes two arguments:</p>
+      <p>1st argument = the "origin"</p>
+      <p>2nd argument = the "destination"</p>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/move-a-filedirectory.html">
+      <h2>Move a File/Directory</h2>
+      <h3><code>mv origin destination</code></h3>
+
+      <img src="img/mvfile.png" alt="move file/directory">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/rename-a-filedirectory.html">
+      <h2>Rename a File/Directory</h2>
+      <h3><code>mv orig dest</code></h3>
+
+      <img src="img/renamefile.png" alt="rename file/directory">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/remove-a-file.html">
+      <h2>Remove a File</h2>
+      <h3><code>rm</code></h3>
+
+      <p>Use the <b>rm</b> command to remove a file.</p><br>
+      <p><em>Expects the name of the file you are removing as an argument.</em></p>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/rm.html">
+      <h2>rm</h2>
+      <h4>(remove a file)</h4>
+
+      <img src="img/rmfile.png" alt="remove a file">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/exercise-2.html">
+      <h3>Exercise 2</h3>
+
+      <ol>
+        <li>Create a folder called <b>cli</b></li>
+        <li>Make that folder your current working directory</li>
+        <li>Create two files: <b>file1.txt</b>, <b>file2.txt</b></li>
+        <li>Copy <b>file1.txt</b> and call the copy <b>file3.txt</b></li>
+        <li>Create a directory called <b>folder1</b></li>
+        <li>Move <b>file1.txt</b> into <b>folder1</b></li>
+        <li>List the contents of <b>folder1</b> without going into it</li>
+        <li>Rename <b>file1.txt</b> to <b>myfile.txt</b></li>
+        <li>Remove the directory <b>folder1</b>, without deleting <b>myfile.txt</b> first</li>
+        <li>Clear your terminal</li>
+      </ol>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/view-a-file.html">
+      <h2>View a File</h2>
+      <h3><code>cat, more, less</code></h3>
+
+      <p>Use the <b>cat</b> command to output (catenate) the contents of a file to the console.</p><br>
+      <p>Use the <b>more</b> or <b>less</b> commands to read a file:</p>
+      <ul>
+        <li><b>more</b> allows you to step through the contents of a file a screen at a time</li>
+        <li><b>less</b> allows you to step backwards or forwards</li>
+        <ul>
+          <li>Press <b>q</b> to exit out of this mode</li>
+        </ul>
+      </ul>
+    </section>
+
+
+
+
+
+
+
+    <section>
+      <h2>cat</h2>
+      <h4>(catenate)</h4>
+
+      <p><em>will output the entire file</em></p>
+      <img src="img/cat.png" alt="cat">
+
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/more.html">
+      <h2>more</h2>
+
+      <img src="img/more.png" alt="more">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/less.html">
+      <h2>less</h2>
+
+      <img src="img/less.png" alt="less">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/edit-a-file.html">
+      <h2>Edit a File</h2>
+
+      <p>You can use various editors built into bash:</p>
+      <p><code>$ vi myfile.txt</code></p>
+      <p><code>$ emacs myfile.txt</code></p>
+      <p><code>$ pico myfile.txt</code></p><br>
+
+      <p>Or on a Mac, you can open with any desktop app:</p>
+      <pre><code class="html" contenteditable>$ open -a TextEdit myfile.txt</code></pre>
+      <p>Or with the default editor:</p>
+      <pre><code class="html" contenteditable>$ open -t myfile.txt</code></pre>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/search-in-a-file.html">
+      <h2>Search within a File</h2>
+      <h3><code>grep</code></h3>
+
+      <p>Use the <b>grep</b> command to search in files.</p><br>
+      <p>The grep command outputs only the lines in a file that match a given pattern.</p><br>
+      <p>The 1st argument is the pattern to match, and the 2nd, 3rd, and so on are the files to search within.</p>
+      <pre><code class="html" contenteditable>$ grep pattern file</code></pre>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/grep.html">
+      <h2>grep</h2>
+      <h4>(search within a file for text that matches a pattern)</h4>
+      <img src="img/grep.png" alt="grep">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/wildcard-matching.html">
+      <h2>Wildcard Matching</h2>
+
+      <p>Use the <b>*</b> (asterisk) symbol to match <em>anything</em>.</p><br>
+      <p>You can use this to search through all of a particular file type.</p>
+      <pre><code class="html" contenteditable>$ grep hello *.txt</code></pre><br>
+      <p>The shell will build a list of all the files that match the non-asterisk part.</p>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/finding-files.html">
+      <h2>Finding Files</h2>
+      <h3><code>find</code></h3>
+
+      <p>Use the <b>find</b> command to find files according to name/metadata.</p><br>
+
+      <p>Find all txt files under the current directory:</p>
+      <pre><code class="html" contenteditable>find . -name '*.txt' -print</code></pre>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/find.html">
+      <h2>find</h2>
+      <h4>(finding files)</h4>
+
+      <img src="img/find.png" alt="find">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/redirecting-output.html">
+      <h2>Redirecting Output</h2>
+
+      <p>By default, input comes from the screen and output goes to the screen.</p><br>
+      <p>You can use <b><</b> and <b>></b> to redirect input/output.</p><br>
+
+      <p>A practical example: Save results of search in a file:</p>
+      <pre><code class="html" contenteditable>grep hello *.txt > results.txt</code></pre>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/redirecting-output-example.html">
+      <h2>Redirecting Output</h2>
+
+      <img src="img/redirection.png" alt="redirection">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/redirection.html">
+      <h2>Redirecting Output</h2>
+
+      <p>Use the <b>echo</b> command to add a new line of text.</p><br>
+      <p>Use the <b>></b> to <em>replace</em> the contents of a file.</p><br>
+      <p>Use the <b>>></b> to <em>add to</em> the end of a file.</p>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/redirection-example.html">
+      <h2>Redirecting Output</h2>
+
+      <img src="img/echo.png" alt="redirection">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/exercise-3.html">
+      <h3>Exercise 3</h3>
+
+      <ol>
+        <li>In the <b>cli</b> directory, output the contents of <b>file2.txt</b> to the terminal</li>
+        <li>Add <a href="http://www.deloreanipsum.com/">a sentence</a>to <b>file2.txt</b></li>
+        <li>Add a few more sentences to <b>file2.txt</b></li>
+        <li>Search the file for the word of your choice and add the results to <b>file3.txt</b></li>
+      </ol>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/command-line-movement.html">
+      <h2>Command Line Movement</h2>
+
+      <ul>
+        <li><b>ctrl-a</b>: jump to beginning of line</li>
+        <li><b>ctrl-e</b>: jump to end of line</li>
+        <li><b>alt-f</b>: jump forward a word</li>
+        <li><b>alt-b</b>: jump back a word</li>
+
+        <li><b>alt-d</b>: delete word</li>
+        <li><b>alt-t</b>: transpose two words</li>
+
+        <li><b>ctrl-xx</b>: jump back to your last edit, again to get back to original position</li>
+      </ul>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/more-command-line-movement.html">
+      <h2>More Command Line Movement</h2>
+
+      <ul>
+        <li>The <b>left/right arrow keys</b> let you edit within a command</li>
+        <li>The <b>up/down arrow keys</b> let you select previous commands</li>
+        <li><b>tab</b> auto-completes filenames</li>
+      </ul><br><br>
+      <p>Lots more, and you can create your own.</p>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/command-line-history.html">
+      <h2>Command Line History</h2>
+
+      <p>Use the <b>history</b> command to see a list of all your previous commands.</p><br>
+      <p>Each command will be listed next to a line number.</p><br>
+
+      <p>A few history-related commands:</p>
+      <ul>
+        <li><b>!!</b>: Latest command</li>
+        <li><b>!568</b>: Command by line #</li>
+        <li><b>!open</b>: Command matching string</li>
+      </ul>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/history.html">
+      <h2>history</h2>
+
+      <img src="img/history.png" alt="history">
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/exercise-4.html">
+      <h3>Exercise 4</h3>
+
+      <ol>
+        <li>Use your up and down arrows to locate a past command with one or more arguments</li>
+        <li>Jump to the beginning of the line</li>
+        <li>Jump to the end of the line</li>
+        <li>Look at your command line history</li>
+        <li>Begin to type a previous command and experiment with using tab to complete it</li>
+      </ol>
+    </section>
+
+
+
+
+
+
+
+    <section data-html="slides/resources.html">
+      <h2>Free Resources</h2>
+
+      <ul>
+        <li><a href="http://cli.learncodethehardway.org/book/">Learn Command Line the Hard Way Tutorial</a></li><br/>
+        <li><a href="http://cli.learncodethehardway.org/bash_cheat_sheet.pdf">Bash Cheat Sheet</a></li><br/>
+        <li><a href="https://code.tutsplus.com/tutorials/how-to-customize-the-command-prompt--net-20586">Customize your Command Prompt</a></li>
+      </ul>
+    </section>
+
+
+
             </div>
 
         </div>
@@ -568,7 +896,6 @@
                     // { src: 'bower_components/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
                     //{ src: 'bower_components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 
-                    { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
                 ]
             });
         </script>
